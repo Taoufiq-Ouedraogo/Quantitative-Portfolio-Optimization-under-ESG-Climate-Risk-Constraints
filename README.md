@@ -35,8 +35,8 @@ The portfolio is formulated as a **constrained optimization problem** combining:
 |---|----|------|--------|
 |  Diversification   | (1) <br> Maximum issuer weight | A single issuer cannot represent more than **10%** of the total portfolio weight |     $$w_i \leq 0.10 \quad \forall i$$  |
 |     |     (2) <br> Concentration limit | The sum of all issuers with weights greater than **5%** cannot exceed **40%** of the portfolio |   $$\sum_{i=1} \max(w_i - 0.05, 0) \leq 0.40$$  |
-|  Climate |  (3) <br> Temperature alignment constraint | The weighted average portfolio `Implied Temperature Rise [°C]` (ITR) must remain below **2°C** and below the investment universe average |   $$ ITR_p = \sum_{i=1} w_i \cdot ITR_i$$  $$ITR_p \leq 2.0 $$  $$ITR_p \leq \frac{1}{N} \sum_{i=1}^{N} ITR_i$$   |
-|    |   (4) <br> Climate VaR constraint | The portfolio aggregated `Climate VaR` (CVaR) must remain below the investment universe Climate VaR |   $$CVaR_p = \sum_{i=1}^{N} w_i \cdot CVaR_i$$  $$CVaR_p \leq \frac{1}{N} \sum_{i=1}^{N} CVaR_i$$ |
+|  Climate |  (3) <br> Temperature alignment constraint | The weighted average portfolio `Implied Temperature Rise [°C]` (ITR) must remain below **2°C** and below the investment universe average |   $$ ITR_p = \sum_{i=1} w_i \cdot ITR_i$$  <br>  $$ITR_p \leq 2.0 $$  $$ITR_p \leq \frac{1}{N} \sum_{i=1}^{N} ITR_i$$   |
+|    |   (4) <br> Climate VaR constraint | The portfolio aggregated `Climate VaR` (CVaR) must remain below the investment universe Climate VaR |   $$CVaR_p = \sum_{i=1}^{N} w_i \cdot CVaR_i$$   <br>   $$CVaR_p \leq \frac{1}{N} \sum_{i=1}^{N} CVaR_i$$ |
 |  Portfolio construction |    (5) <br> Fully invested portfolio | The sum of portfolio weights must equal **100%** |    $$\sum_{i=1} w_i = 1$$ |
 |    |    (6) <br> Long-only portfolio | Portfolio weights must remain positive or null |     $$w_i \geq 0 \quad \forall i$$    |
 
