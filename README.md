@@ -1,5 +1,8 @@
 
-# Project Goal
+# RENNES DATA CHALLENGE 2025
+________________
+
+<br>
 
 The goal of this project is to construct an equity portfolio that:
 * Maximizes financial performance (expected return / risk trade-off)
